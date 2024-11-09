@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +10,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+@keyframes waveAnimation {
+  0% {
+    d: path(
+      "M0,0V120H1200V0C1166.91,27.48,1101.67,49.26,1020,60.74,897.45,78.21,766.54,77.48,655.65,58.56,564.87,43.5,486.7,18.77,410,7.92,342.64-1.61,267.31.15,200,16.56,142.07,30.88,86.89,52.93,0,89.74Z"
+    );
+  }
+  50% {
+    d: path(
+      "M0,0V120H1200V0C1166.91,47.48,1101.67,69.26,1020,80.74,897.45,98.21,766.54,97.48,655.65,78.56,564.87,63.5,486.7,38.77,410,27.92,342.64-1.61,267.31.15,200,36.56,142.07,50.88,86.89,72.93,0,109.74Z"
+    );
+  }
+  100% {
+    d: path(
+      "M0,0V120H1200V0C1166.91,27.48,1101.67,49.26,1020,60.74,897.45,78.21,766.54,77.48,655.65,58.56,564.87,43.5,486.7,18.77,410,7.92,342.64-1.61,267.31.15,200,16.56,142.07,30.88,86.89,52.93,0,89.74Z"
+    );
+  }
+}
+
+.wave {
+  animation: waveAnimation 5s ease-in-out infinite;
 }
