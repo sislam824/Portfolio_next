@@ -6,7 +6,6 @@ import Contact from "@/components/customComponents/contact";
 import Hero from "@/components/customComponents/hero";
 import Navbar from "@/components/customComponents/navbar";
 import Projects from "@/components/customComponents/projects";
-import { useRandomBackgroundImage } from "./hooks/useRandomBackgroundImage";
 import { useRandomGradient } from "./hooks/useRandomGradient";
 import TechStack from "@/components/customComponents/tech-stack";
 import Github from "@/components/customComponents/github";

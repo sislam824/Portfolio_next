@@ -15,7 +15,6 @@ interface ContactFormData {
   message?: string;
 }
 export default function Contact() {
-  const form = useRef();
   const [done, setDone] = useState(false);
   const [notDone, setNotDone] = useState(false);
   const [formData, setFormData] = useState<ContactFormData>({});
