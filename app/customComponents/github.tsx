@@ -1,27 +1,7 @@
 import React, { useEffect } from "react";
-import ScrollReveal from "scrollreveal";
 export default function Github() {
-  useEffect(() => {
-    const sr = ScrollReveal({
-      distance: "30px",
-      duration: 600,
-      delay: 100,
-      easing: "ease-out",
-      reset: false,
-    });
-
-    sr.reveal(".gitcont", {
-      origin: "bottom",
-    });
-
-    sr.reveal(".img_div img", {
-      origin: "bottom",
-      interval: 200,
-    });
-  }, []);
-
   return (
-    <div className="gitcont flex flex-col gap-10 w-[90%] mx-auto" id="github">
+    <div className=" flex flex-col gap-10 w-[90%] mx-auto" id="github">
       <h1
         style={{
           fontSize: "30px",
