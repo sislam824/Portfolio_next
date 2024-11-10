@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import GitHubCalendar from "react-github-calendar";
 import ScrollReveal from "scrollreveal";
-import { motion } from "framer-motion";
 export default function Github() {
   useEffect(() => {
     const sr = ScrollReveal({
