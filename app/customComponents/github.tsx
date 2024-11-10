@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 export default function Github() {
   return (
     <div className=" flex flex-col gap-10 w-[90%] mx-auto" id="github">
