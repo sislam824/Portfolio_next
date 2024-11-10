@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { Home, Mail, Github, Phone, Linkedin } from "lucide-react";
 import Link from "next/link";
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useState } from "react";
 
 interface ContactFormData {
   from_name?: string;
@@ -16,7 +16,6 @@ interface ContactFormData {
 }
 export default function Contact() {
   const [done, setDone] = useState(false);
-  const [notDone, setNotDone] = useState(false);
   const [formData, setFormData] = useState<ContactFormData>({});
   // console.log(formData);
   const handleChange = (
@@ -24,13 +23,11 @@ export default function Contact() {
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setDone(false);
-    setNotDone(false);
   };
 
   const sendEmail = async (e: FormEvent) => {
     e.preventDefault();
     if (!formData.from_name || !formData.reply_to || !formData.message) {
-      setNotDone(true);
     } else {
       try {
         const result = await emailjs.send(
@@ -48,7 +45,6 @@ export default function Contact() {
         }
       } catch (error) {
         console.error("Error sending email:", error);
-        setNotDone(true);
       }
     }
   };

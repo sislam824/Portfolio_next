@@ -1,5 +1,4 @@
 "use client";
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
@@ -15,7 +14,7 @@ export default function Hero() {
   const deletingSpeed = 100;
 
   useEffect(() => {
-    let timer: any;
+    let timer: string | number | NodeJS.Timeout | undefined;
     if (!isDeleting && displayText !== fullText) {
       timer = setTimeout(() => {
         setDisplayText(fullText.substring(0, displayText.length + 1));
