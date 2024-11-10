@@ -1,14 +1,13 @@
 "use client";
-
 import React from "react";
-import About from "@/components/customComponents/about";
-import Contact from "@/components/customComponents/contact";
-import Hero from "@/components/customComponents/hero";
-import Navbar from "@/components/customComponents/navbar";
-import Projects from "@/components/customComponents/projects";
+import About from "@/app/customComponents/about";
+import Contact from "@/app/customComponents/contact";
+import Hero from "@/app/customComponents/hero";
+import Navbar from "@/app/customComponents/navbar";
+import Projects from "@/app/customComponents/projects";
 import { useRandomGradient } from "./hooks/useRandomGradient";
-import TechStack from "@/components/customComponents/tech-stack";
-import Github from "@/components/customComponents/github";
+import TechStack from "@/app/customComponents/tech-stack";
+import Github from "@/app/customComponents/github";
 
 export default function Home() {
   const { gradient } = useRandomGradient();
